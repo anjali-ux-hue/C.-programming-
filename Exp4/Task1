@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+// Function to check if a number is prime
+int isPrime(int num) {
+    if (num < 2)
+        return 0;  // 0 and 1 are not prime numbers
+    for (int i = 2; i <= num / 2; i++) {
+        if (num % i == 0)
+            return 0;  // Not a prime number
+    }
+    return 1;  // Prime number
+}
+// Function to print all prime numbers between two numbers
+void findPrimes(int start, int end) {
+    printf("Prime numbers between %d and %d are: \n", start, end);
+    for (int i = start; i <= end; i++) {
+        if (isPrime(i)) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+}
+
+int main() {
+    int start, end;
+
+    // Input the range
+    printf("Enter the start of the range: ");
+    scanf("%d", &start);
+    printf("Enter the end of the range: ");
+    scanf("%d", &end);
+
+    // Call the function to find and print prime numbers
+    findPrimes(start, end);
+
+    return 0;
+}
+/* output
+Enter the start of the range: 10
+Enter the end of the range: 50
+Prime numbers between 10 and 50 are:
+11 13 17 19 23 29 31 37 41 43 47
+*/
