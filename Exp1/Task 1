@@ -1,1 +1,22 @@
+/*Name: Anjali
+div : E
+UIN : 241S026
+*/
+#include<stdio.h>
 
+int main (){
+
+printf("Name\t\t:Anjali Asaram Mhaske\n");
+printf("Age\t\t:19\n");
+printf("class\t\t:1st year-ECS\n");
+printf("division\t:E\n");
+printf("UIN\t\t:241S026");
+return 0;
+}
+output 
+Name            :Anjali Asaram Mhaske
+Age             :19
+class           :1st year-ECS
+division        :E
+UIN             :241S026
+[Process completed - press Enter]
