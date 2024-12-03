@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main(){
+char str[100];
+int length = 0, i=0;
+
+//Input the string from the user
+printf("Enter a string: ");
+gets(str);
+
+//Loop through the string until the null charcater '\0' is encountered
+while(str[i] !='\0'){
+    length++;
+    i++;
+}
+
+//output the length of the string
+printf("The length of the string is: %d\n",length);
+return 0;
+}
