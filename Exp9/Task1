@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <string.h>
+
+// Define a structure to store student details
+struct Student {
+    char name[50];
+    int roll_number;
+    int total_marks;
+    };
+
+// Function to get data for 5 students
+void get_student_data(struct Student students[], int count) {
+    for (int i = 0; i < count; i++) {
+        printf("Enter details for Student %d:\n", i + 1);
+        printf("Enter Name: ");
+        scanf("%s", students[i].name);
+        printf("Enter Roll Number: ");
+        scanf("%d", &students[i].roll_number);
+        printf("Enter Total Marks: ");
+        scanf("%d", &students[i].total_marks);
+    }
+}
+
+// Function to find the topper
+struct Student find_topper(struct Student students[], int count) {
+    struct Student topper = students[0];
+
+    for (int i = 1; i < count; i++) {
+        if (students[i].total_marks > topper.total_marks) {
+            topper = students[i];
+        }
+    }
+    return topper;
+}
+
+int main() {
+    struct Student students[5];
+
+    // Get data for 5 students
+    get_student_data(students, 5);
+
+    // Find the topper
+    struct Student topper = find_topper(students, 5);
+
+    // Display the topper's details
+    printf("\nTopper Details:\n");
+    printf("Name: %s\n", topper.name);
+    printf("Roll Number: %d\n", topper.roll_number);
+    printf("Total Marks: %d\n", topper.total_marks);
+
+    return 0;
+}
