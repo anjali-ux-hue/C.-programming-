@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+int n, i, max;
+//Ask the user for the number in the array
+printf("Enter the number of elements in the array: ");
+scanf("%d", &n);
+int arr[n]; //Declare an array of size n
+
+//input the elements of the array
+printf("Enter %d elements: \n",n);
+for(i=0;i<n; i++){
+    scanf("%d", &arr[i]);
+}
+//initialize the first element as the largest
+max=arr[0];
+
+//Loop through the array to find the largest element
+for(i=1;i<n; i++){
+    if(arr[i]>max){
+        max=arr[i];
+    }
+}
+//output the largest element
+printf("the largest element in the array is: %d\n", max);
+return 0;
+}
