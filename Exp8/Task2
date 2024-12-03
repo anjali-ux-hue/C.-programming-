@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main (){
+  char str[100];
+  int start, end, isPalindrome = 1;
+
+  //Input the string from the user
+   printf("Enter a string: ");
+   gets(str);
+
+   //Find the length of the string
+   for(end=0; str[end] !='\0'; end++);
+   end--; //Adjust to the last character index
+
+   //Check if the  string is a palindrome
+   for(start=0; start<end;start++,end--)
+   {
+       if(str[start] !=str[end]){
+        isPalindrome=0;
+        break;
+       }
+   }
+   //output the result
+   if(isPalindrome)
+    printf("The entered string is a palindrome.\n");
+    else
+   printf("The entered string is not a palindrome.\n");
+   return 0;
+}
