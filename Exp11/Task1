@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <stdlib.h>
+// Structure to store employee data
+struct employee {
+    int id;
+    char name[50];
+    float salary;
+};
+
+// Function to add an employee record to the file
+void addEmployee() {
+    FILE *file = fopen("employee_data.txt", "a"); // Open file in append mode
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return;
+    }
+
+    struct employee emp;
+
+    // Get employee details from the user
+    printf("Enter employee ID: ");
+    scanf("%d", &emp.id);
+    printf("Enter employee Name: ");
+    scanf("%s", emp.name);
+    printf("Enter employee Salary: ");
+    scanf("%f", &emp.salary);
+
+    // Write employee data to the file
+    fprintf(file, "%d %s %.2f\n", emp.id, emp.name, emp.salary);
+
+    printf("Employee record added successfully!\n");
+
+    fclose(file); // Close the file
+}
+
+// Function to display all employee records from the file
+void displayEmployees() {
+    FILE *file = fopen("employee_data.txt", "r"); // Open file in read mode
+    if (file == NULL) {
+        printf("Error opening file or no records found!\n");
+        return;
+    }
+
+    struct employee emp;
+
+    // Read and display employee records from the file
+    printf("\nEmployee Records:\n");
+    printf("ID\tName\t\tSalary\n");
+    printf("----------------------------------\n");
+
+    while (fscanf(file, "%d %s %f", &emp.id, emp.name, &emp.salary) != EOF) {
+        printf("%d\t%-10s\t%.2f\n", emp.id, emp.name, emp.salary);
+    }
+
+    fclose(file); // Close the file
+}
+
+int main() {
+    int choice;
+
+    while (1) {
+        // Menu
+        printf("\nEmployee Database Menu\n");
+        printf("1. Add Employee\n");
+        printf("2. Display Employees\n");
+        printf("3. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                addEmployee();  // Add an employee
+                break;
+            case 2:
+                displayEmployees();  // Display all employees
+                break;
+            case 3:
+                printf("Exiting...\n");
+                exit(0);  // Exit the program
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    }
+
+    return 0;
+}
+/* Output 
+Employee Database Menu
+1. Add Employee
+2. Display Employees
+3. Exit
+Enter your choice: 1
+Enter employee ID: 570
+Enter employee Name: sarvesh
+Enter employee Salary: 200000
+Employee record added successfully!
+*/
