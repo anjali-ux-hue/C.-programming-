@@ -21,3 +21,9 @@ int main() {
 
     return 0;
 }
+Output
+Enter the first number: 25
+Enter the second number: 15
+The sum of 25 and 15 is: 40
+
+[Process completed - press Enter]
