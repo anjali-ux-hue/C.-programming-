@@ -50,3 +50,31 @@ int main() {
 
     return 0;
 }
+/* output 
+
+Enter details for Student 1:
+Enter Name: prachi
+Enter Roll Number: 58
+Enter Total Marks: 60
+Enter details for Student 2:
+Enter Name: sumit
+Enter Roll Number: 59
+Enter Total Marks: 58
+Enter details for Student 3:
+Enter Name: sunita
+Enter Roll Number: 15
+Enter Total Marks: 47
+Enter details for Student 4:
+Enter Name: jayashree
+Enter Roll Number: 56
+Enter Total Marks: 70
+Enter details for Student 5:
+Enter Name: bhagyashree
+Enter Roll Number: 89
+Enter Total Marks: 73
+
+Topper Details:
+Name: bhagyashree
+Roll Number: 89
+Total Marks: 73
+*/
