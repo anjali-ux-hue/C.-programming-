@@ -17,3 +17,9 @@ printf("The sum of %d and %d is: %d\n", num1,num2,sum);
 return 0;
 
 }
+Output 
+Enter first number: 2
+Enter second number: 8
+Sum of 2 and 8 is: 10
+
+[Process completed - press Enter]
