@@ -25,3 +25,14 @@ int main() {
     printf("\n");
     return 0;
 }
+Output 
+Enter the number of elements in the array: 4
+Enter 4 elements:
+9
+6
+3
+0
+Array elements in reverse order:
+0 3 6 9
+
+[Process completed - press Enter]
