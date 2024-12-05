@@ -26,3 +26,8 @@ int main (){
    printf("The entered string is not a palindrome.\n");
    return 0;
 }
+Output 
+Enter a string: Lakhan
+The entered string is not a palindrome.
+
+[Process completed - press Enter]
